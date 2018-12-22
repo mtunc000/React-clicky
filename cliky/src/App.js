@@ -32,7 +32,7 @@ class App extends Component {
     
     this.setState({friendsPosition: shuffleArray(friends) });
 
-    this.incrementHandler()
+     this.incrementHandler()
     // this.clickHandler (id)
 
   }
@@ -138,8 +138,8 @@ class App extends Component {
             key={friend.id}
             name={friend.name}
             image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
+            // occupation={friend.occupation}
+            // location={friend.location}
           />
         ))}
       </Wrapper>
