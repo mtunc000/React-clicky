@@ -17,7 +17,7 @@ const FriendCard = props => (
     {/* <span onClick={() => props.removeFriend(props.id)} className="remove">
      
     </span> */}
-    <div onClick={ props.clickHandler} 
+    <div onClick={() => props.clickHandler(props.id)} 
     className="remove">
     𝘅
     </div>

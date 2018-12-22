@@ -32,25 +32,26 @@ class App extends Component {
     
     this.setState({friendsPosition: shuffleArray(friends) });
 
-     this.incrementHandler()
-    // this.clickHandler (id)
+     //this.incrementHandler()
+     this.clickHandler (id)
 
   }
-  /////check for double click for the same image////
+  ///check for double click for the same image////
 
-  // clickHandler = (id)=> {
-  //   if (this.state.selected.indexOf(id) ===-1) {
+  clickHandler = (id)=> {
+    console.log(id, "Was clicked")
+    if (this.state.selected.indexOf(id) ===-1) {
       
-  //     this.incrementHandler();
-  //     this.setState({ selected: [...this.state.selected,id ] });
-  //   } 
-  //   // else{
-  //   //   this.resetHandler
-  //   // }
+      this.incrementHandler();
+      this.setState({ selected: [...this.state.selected,id ] });
+    } 
+    else{
+      this.resetHandler()
+    }
       
     
-  //   //console.log(clickHandler);
-  // };
+    //console.log(clickHandler);
+  };
   
 
   incrementHandler = ()=> {
@@ -78,23 +79,23 @@ class App extends Component {
     }
     
  
-// resetHandler = ()=> {
-//   const newLoss = this.state.loss +1;
-//   this.setState ({
-//     loss:newLoss,
-//   })
-//     if( newLoss >= this.state.loss){
-//       this.setState({loss: newLoss})
+resetHandler = ()=> {
+  const newLoss = this.state.loss +1;
+  this.setState ({
+    loss:newLoss,
+  })
+    if( newLoss >= this.state.loss){
+      this.setState({loss: newLoss})
 
-//     }
+    }
   
     
-//     // selected: [],
+    // selected: [],
     
 
  
-//   this.changeFriendPosition();
-// }
+  // this.changeFriendPosition();
+}
 
 
  
@@ -123,7 +124,7 @@ class App extends Component {
         </Nav>
       <Wrapper>
         
-        <Title><h2> "Clicky -Game"</h2>
+        <Title> "Clicky -Game"
         <p>Do not clik the same picture twice</p>
         </Title>
 
